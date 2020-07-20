@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	form, div {
+		float: left;
+	}
+</style>
+</head>
+<body>
+	<form name = "frmproducts" method="post" action="/test/products"encType="UTF-8">
+	제품번호: <input type="text" name="prod_id"> 공급업체번호: <input type="text" name="vend_id">
+	<input type="submit" value="조회">
+	</form>
+	<div>
+	<a href="/test/productsAdd.html"><button>제품 추가</button></a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제품 추가</title>
+<script type = "text/javascript">
+ function fn_ProductAdd() {
+	var  frmProductAdd = document.frmProductAdd;
+	var prod_id = frmProductAdd.prod_id.value;
+	var prod_name= frmProductAdd.prod_name.value;
+	var prod_price= frmProductAdd.prod_price.value;
+	var prod_desc= frmProductAdd.prod_desc.value;
+	var vend_id= frmProductAdd.vend_id.value;
+	
+	if(prod_id.length ==0 || id==""){
+	alert("아이디는 필수입니다.");
+	}else if(prod_name.length ==0 || pwd==""){
+	alert("이름은 필수입니다.");
+	}else if(prod_price.length ==0 || name==""){
+	alert("가격은 필수입니다.");
+	}else if(prod_desc.length ==0 || email==""){
+	alert("상품내용은 필수입니다.");
+	}else if(vend_id.length ==0 || email==""){
+		alert("업체번호 필수입니다.");
+	}else {
+		frmProductAdd.method = "post";
+		frmProductAdd.action = "/test/products";
+		frmProductAdd.submit();
+		}
+	}
+	</script>
+</head>
+<body>
+<form name="frmProductAdd">
+제품번호:<input type="text" name="prod_id"><br>
+제품명:<input type="text" name="prod_name"><br>
+제품가격:<input type="text" name="prod_price"><br>
+제품설명:<input type="text" name="prod_desc"><br>
+공급업체번호:<input type="text" name="vend_id"><br>
+		<input type="button"value="제품추가"onclick="fn_ProductAdd()">
+	 	<input type="reset"value="다시입력">
+	 	<input type="hidden"name="command"value="addProduct"/>
+</form>
+</body>
+</html>

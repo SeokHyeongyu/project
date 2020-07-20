@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type = "text/javascript">
+ function fn_frmmodifiedrVendors() {
+	 
+	var  frmmodifiedrVendors = document.frmmodifiedrVendors;
+	var vend_id = frmmodifiedrVendors.vend_id.value;
+	var vend_name= frmmodifiedrVendors.vend_name.value;
+	var vend_address= frmmodifiedrVendors.vend_address.value;
+	var vend_city= frmmodifiedrVendors.vend_city.value;
+	var vend_state= frmmodifiedrVendors.vend_state.value;
+	var vend_zip= frmmodifiedrVendors.vend_zip.value;
+	var vend_country= frmmodifiedrVendors.vend_country.value;
+	
+	if(vend_id.length ==0 || vend_id==""){
+	alert("공급업체번호 필수입니다.");
+	}else if(vend_name.length ==0 || vend_name==""){
+	alert("공급업체이릅 필수입니다.");
+	}else if(vend_address.length ==0 || vend_address==""){
+	alert("공급업체주소 필수입니다.");
+	}else if(vend_city.length ==0 || vend_city==""){
+	alert("공급업체 시 필수입니다.");
+	}else if(vend_state.length ==0 || vend_state==""){
+		alert("공급업체 주 필수입니다.");
+	}else if(vend_zip.length ==0 || vend_zip==""){
+		alert("공급업체 우편번호 필수입니다.");
+	}else if(vend_country.length ==0 || vend_country==""){
+		alert("공급업체 국가 필수입니다.");
+	}else {
+		frmmodifiedrVendors.method = "post";
+		frmmodifiedrVendors.action = "/test/vendors";
+		frmmodifiedrVendors.submit();
+		}
+	}
+	</script>
+</head>
+<body>
+	<form nema="frmmodifiedrVendors">
+	공급업체번호:<input type="text" nema="vend_id">
+	공급업체이릅:<input type="text" nema="vend_name">
+	공급업체주소:<input type="text" nema="vend_address">
+	공급업체 시:<input type="text" nema="vend_city">
+	공급업체 주:<input type="text" nema="vend_state">
+	공급업체 우편번호:<input type="text" nema="vend_zip">
+	공급업체 국가:<input type="text" nema="vend_country">
+		<input type="button"value="수정"onclick="fn_frmmodifiedrVendors()">
+	 	<input type="hidden"name="command"value="modifiedrVendors"/>
+	</form>
+</body>
+</html>
