@@ -11,7 +11,7 @@ public class MemberBean {
 	
 	
 	public MemberBean() {
-		
+		//test
 	}
 
 
