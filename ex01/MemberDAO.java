@@ -24,8 +24,7 @@ public class MemberDAO {
 			dataFactory = (DataSource) envContext.lookup("jdbc/oracle");
 		} catch (Exception e) {
 			e.printStackTrace();
-Sysdddddddd
-
+Sysddddddddddddddssstestttttttttttttttt         1111d
 		}
 	}
 
